@@ -787,13 +787,13 @@ jQuery.extend({
 			if (!this.s.backgroundImage) return false;
 			if (!this.loadedBackgroundImage == this.s.backgroundImage) return false;
 			
-			jQuery('img.s5-background').remove();
+			jQuery('.s5-background:nth-of-type(2)').remove(); // FIXME: nth-of-type selector is a workaround for https://dev.tiki.org/bug5148 to keep the custom bg image from Slideshow wikiplugin not removed
 			
-			var background = jQuery('<img class="s5-background" />')
+			var background = jQuery('<div class="s5-background" />')
 				.load(function() {
 					jQuery.s5.scale();
 				})
-				.attr('src', this.s.backgroundImage)
+				.attr('style', 'background-image: url("' + this.s.backgroundImage + '"); background-repeat: no-repeat; background-position: center center; background-size: cover;')
 				.prependTo(parent);
 			
 			this.s.backgroundImage = this.loadedBackgroundImage;
