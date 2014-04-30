@@ -1,13 +1,11 @@
-body, body < * {
+body, body > * {
 	margin: 0;
 	padding: 0;
-	z-index: 1;
 	background-color: white;
-	position: absolute;
 }
 
 body * {
-	border: none ! important;
+	border: none !important;
 }
 .s5-slide * {
 	line-height: 1em;
@@ -23,8 +21,8 @@ body * {
 
 .s5-background {
     position: fixed; 
-    left: 0px; 
-    top: 0px; 
+    left: 0; 
+    top: 0; 
     z-index: 0;
 	width: 100%;
 	height: 100%;
@@ -34,15 +32,15 @@ body * {
 	position: relative;
 	z-index: 5;
 	font-size: 2em;
-	background: none ! important;
+	background: none !important;
 }
 
 .s5-footer {
 	width: 100%;
 	position: fixed;
 	z-index: 103;
-	bottom: 0px;
-	left: 0px;
+	bottom: 0;
+	left: 0;
 	font-size: 0.5em;
 	padding: 5px;
 	padding-left: 1em;
@@ -62,29 +60,29 @@ body * {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 0px;
+	padding: 0;
 	z-index: 5;
 	font-size: 1em;
-	background-color: transparent ! important;
-	background-image: none ! important;
+	background-color: transparent !important;
+	background-image: none !important;
 }
 .s5-slide-print {
-	padding: 0px;
+	padding: 0;
 	font-size: 1em;
-	background-color: transparent ! important;
-	background-image: none ! important;
+	background-color: transparent !important;
+	background-image: none !important;
 	page-break-after: always;
 }
 
 
 .s5-hide {
 	position: absolute;
-	overflow: hidden ! important;
-	height: 0px ! important;
-	width: 0px ! important;
+	overflow: hidden !important;
+	height: 0 !important;
+	width: 0 !important;
 	z-index: -100;
-	opacity: 0.001 ! important;
-	filter: alpha(opacity=001) ! important;
+	opacity: 0.001 !important;
+	filter: alpha(opacity=001) !important;
 }
 
 .s5-slide td {
@@ -97,11 +95,11 @@ body * {
 
 .s5-outline {
 	position: fixed;
-	bottom: 0px;
-	padding: 0px ! important;
-	margin: 0px ! important;
+	bottom: 0;
+	padding: 0 !important;
+	margin: 0 !important;
 	width: 250px;
-	font-size: 12px ! important;
+	font-size: 12px !important;
 	background-color: white;
 	z-index: 105;
 	display: none;
@@ -111,12 +109,12 @@ body * {
 
 .s5-outline .s5-outlook-close {
 	font-weight: bold;
-	font-size: 18px ! important;
-	line-height: 20px ! important;
+	font-size: 18px !important;
+	line-height: 20px !important;
 	width: 1em;
 	position: absolute;
-	padding: 0px ! important;
-	margin: 0px ! important;
+	padding: 0 !important;
+	margin: 0 !important;
 	text-align: center;
 	background: url("images/back.png") repeat-x scroll 50% 50% #CCCCCC;
 	cursor: pointer;
@@ -130,16 +128,16 @@ body * {
 }
 
 .s5-outline ul {
-	border: 0px;
-	margin: 0px;
+	border: 0;
+	margin: 0;
 	padding-left: 17px;
 	height: inherit;
 	overflow-y: scroll;
 }
 
 .s5-outline li {
-	border: 0px;
-	margin: 0px;
+	border: 0;
+	margin: 0;
 	height: 22px;
 	white-space: nowrap;
 	list-style: none;
@@ -150,8 +148,8 @@ body * {
 	position: fixed;
 	text-align: center;
 	z-index: 104;
-	bottom: 0px;
-	left: 0px;
+	bottom: 0;
+	left: 0;
 	width: 100%;
 }
 
@@ -166,26 +164,30 @@ body * {
 	left: -10000em;
 	top: -10000em;
 }
-/* Added for compatibility with tikiwiki */
+/* Added for compatibility with Tiki */
 #cboxOverlay {
-	display: none ! important;
+	display: none !important;
 }
 
 #show-errors-button {
-	display: none ! important;
+	display: none !important;
 }
 
 .icon_edit_section {
 	position: relative;
-	float: left ! important;
+	float: left !important;
 	display: none;
 }
 
 /*pdf styling*/
 
 @page {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.s5pdf {
+	font-family: "Helvetica", sans-serif;
 }
 
 .s5pdf .s5-slide-grid {
